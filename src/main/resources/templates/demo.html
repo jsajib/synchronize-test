@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Demo</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<div>
+    <h1>Demo List</h1>
+    <ul>
+        <table>
+            <tr th:each="demo : ${demoList}">
+                <td th:text="${demo}"></td>
+            </tr>
+        </table>
+    </ul>
+
+    <h1>Active Demo</h1>
+    <ul>
+        <table>
+            <tr>
+                <td th:text="${demo != null} ? ${demo} : ${message}"></td>
+            </tr>
+        </table>
+    </ul>
+</div>
+</body>
+</html>
